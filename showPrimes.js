@@ -15,3 +15,4 @@ function showPrimes(limit) {
   }
 
   showPrimes(20)
+  
