@@ -1,6 +1,6 @@
 function showPrimes(limit) {
 
-    for (let i = 2; i < limit; i++) {
+    for (let i = 2; i <= limit; i++) {
       if (!isPrime(i)) continue;
         
        console.log(i);  // a prime
