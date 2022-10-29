@@ -34,11 +34,6 @@ const stores = [
   }
 ]
 
-// function returnValue(array, key){
-//   array.forEach(key => {}
-
-//   }
-// )
 
 function returnKeyInArray(array, key){
   
@@ -48,78 +43,133 @@ function returnKeyInArray(array, key){
 
 // console.log(returnKeyInArray (stores, 'name'))
 
+////////////////////////////////////////////////////////////////////////  ///
 
 
 const listOfLetters = ["a","a","b","c","A"];
 
-function occurencesOfLetters(arrayOfLetters, letter){
+function occurencesOfLetters(arrayOfLetters, letter) {
   const resultFromArrayOfLetters = arrayOfLetters.filter(element => element.toLowerCase() === letter.toLowerCase());
   return resultFromArrayOfLetters.length
 }
-
 // console.log(occurencesOfLetters(listOfLetters, 'C'));
 
-const arrayOfLetters = 'awesome'
-// console.log(arrayOfLetters[0])
-// const stringArray= arrayOfLetters.splice(1,arrayOfLetters.length - 1)
-// const result = arrayOfLetters.slice(2,5)
-const arrayOfLetters2 = ['awesome','example','of','forEach']
+////////////////////////////////////////////////////////////////////////  ///
+
+const array = ['awesome','example','of','forEach']
 
 function printFirstAndLast (arrayOfLetters) {
-  const result = arrayOfLetters.map(stringArray =>{
-    // stringArray.splice(1,stringArray.length - 1)
-    // console.log (result)
+  arrayOfLetters.map(string =>{
+    result = (string.slice(0,1)+ string.slice(-1))
+    console.log(result)
   })
 }
-
-printFirstAndLast (arrayOfLetters2)
-const result2 = arrayOfLetters2.map((element, index)=>{
-
-})
-// console.log(result2)
+// printFirstAndLast(array)
 
 // console.log(printFirstAndLast(listOfLetters, 'a'))
+
+
+///////////////////////////////////////////////////////////////////////////
+
  const arrayOfNumbers = [1, 2, 3, 5]
 
 function valTimesIndex(array){
 const result = array.map((element, index)=> element * index);
-console.log(result)
+// console.log(result)
 }
 // valTimesIndex(arrayOfNumbers)
 
 
-const key = 'hobbies'
-const value = 'eating'
-// faruq.key = value
 
-// console.log(faruq)
- const person = [{name:'Joshua'},{name:'Mark'},{name:'Arthur'}]
-const anotherP = [{name:'Joshua'}]
+////////////////////////////////////////////////////////////////////////  ///
 
-
-
-function addKeyAndValue2(array, key, value) {
+function addKeyAndValue(array, key, value) {
  for (element of array) {
   element[key] = value;
  }
- console.log(array )
+ return array
  
 }
 
+// console.log(addKeyAndValue(stores, "isInstructor", true));
+
+////////////////////////////////////////////////////////////////
+let users = [
+  {
+    username: 'larry',
+    email: 'larry@foo.com',
+    yearsExperience: 22.1,
+    favoriteLanguages: ['Perl', 'Java', 'C++'],
+    favoriteEditor: 'Vim',
+    hobbies: ['Fishing', 'Sailing', 'Hiking'],
+    hometown: {
+      city: 'San Francisco',
+      state: 'CA'
+    }
+  },
+  {
+    username: 'jane',
+    email: 'jane@test.com',
+    yearsExperience: 33.9,
+    favoriteLanguages: ['Haskell', 'Clojure', 'PHP'],
+    favoriteEditor: 'Emacs',
+    hobbies: ['Swimming', 'Biking', 'Hiking'],
+    hometown: {
+      city: 'New York',
+      state: 'NY'
+    }
+  },
+  {
+    username: 'sam',
+    email: 'sam@test.com',
+    yearsExperience: 8.2,
+    favoriteLanguages: ['JavaScript', 'Ruby', 'Python', 'Go'],
+    favoriteEditor: 'Atom',
+    hobbies: ['Golf', 'Cooking', 'Archery'],
+    hometown: {
+      city: 'Fargo',
+      state: 'SD'
+    }
+  },
+  {
+    username: 'anne',
+    email: 'anne@test.com',
+    yearsExperience: 4,
+    favoriteLanguages: ['C#', 'C++', 'F#'],
+    favoriteEditor: 'Visual Studio Code',
+    hobbies: ['Tennis', 'Biking', 'Archery'],
+    hometown: {
+      city: 'Albany',
+      state: 'NY'
+    }
+  },
+  {
+    username: 'david',
+    email: 'david@test.com',
+    yearsExperience: 12.5,
+    favoriteLanguages: ['JavaScript', 'C#', 'Swift'],
+    favoriteEditor: 'VS Code',
+    hobbies: ['Volunteering', 'Biking', 'Coding'],
+    hometown: {
+      city: 'Los Angeles',
+      state: 'CA'
+    }
+  }
+];
 
 
-addKeyAndValue2(stores, "isInstructor", true);
-// const result = faruq.map(element => element[key] = value)
+function printEmails (){
+  for (object of users){
+    console.log(object.email);
+  }
+}
+// printEmails()
 
-
-// addKeyAndValue(person, 'bestfriend', 'kenny')
-// let returnKeyArray = stores.map((store, name) => {
-//     return store
-// })
-
-
-//  console.log(returnKeyInArray (stores))
-
-// function ownersNames(stores, names){
-//     for (name)
-// }
+////////////////////////////////////////////////////////////////////////
+function printHobbies (){
+  for (object of users){
+    console.log(object.username, object.hobbies);
+  }
+}
+// printHobbies()
+//////////////////////////////////////////////////
