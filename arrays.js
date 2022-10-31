@@ -167,9 +167,74 @@ function printEmails (){
 
 ////////////////////////////////////////////////////////////////////////
 function printHobbies (){
-  for (object of users){
-    console.log(object.username, object.hobbies);
-  }
+   for (object of users)
+    object
+    .hobbies
+    .map(element => console.log( element));
 }
+
+
 // printHobbies()
 //////////////////////////////////////////////////
+
+ function findHometownByState(state ){
+
+  const result =users.find(user => user.hometown.state === state);
+  console.log (result)
+}
+// findHometownByState('CA' )
+
+////////////////////////////////////////////////////////////////
+
+function allLanguages(){
+  const result = users.map(user => user.favoriteLanguages)
+  const result2 = []
+  for (arrayElement of result){
+    
+    for (element of arrayElement){
+      result2.push(element)
+    }
+  }
+  const result3 = []
+  for( element of result2){
+    if (result3.includes(element)) continue;
+    else result3.push(element)
+  }
+  console.log (result3)
+  }
+
+// allLanguages()
+
+////////////////////////////////////////////////////////////////
+
+function hasFavoriteEditor(editor){
+  const result =users.some(user => user.favoriteEditor === editor);
+  console.log (result);
+}
+// hasFavoriteEditor('VS Code')
+
+////////////////////////////////////////////////////////////////
+
+function findByUsername (username){
+  const result = users.filter(element => element.username === username)
+  console.log (result);
+}
+// findByUsername('david');
+
+////////////////////////////////////////////////////////////////
+// let word = 'incredible'
+// let vowel = ['a', 'e', 'i', 'o', 'u']
+//   for (letters of word){
+//     for (letter of vowel){
+//       if(letters === letter){
+//         let result = ''
+//         result
+
+// function vowelCount (wordToCheck){
+//   wordToCheck
+// }
+// let string ='book'
+////////////////////////////////////////////////////////////////////////
+// function removeVowels (string){
+//   const result = string.
+// }
