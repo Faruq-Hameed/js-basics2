@@ -34,7 +34,9 @@ const stores = [
   }
 ]
 
-
+////////////////////////////////////////////////////////////////////////
+// PART ONE OF ARRAYS
+//////////////////////// Exercises 1////////////////////////////////////////////////////
 function returnKeyInArray(array, key){
   
     const returnedArray=  array.map(object => object[key])
@@ -43,7 +45,7 @@ function returnKeyInArray(array, key){
 
 // console.log(returnKeyInArray (stores, 'name'))
 
-////////////////////////////////////////////////////////////////////////  ///
+//////////////////////////Exercises 2//////////////////////////////////////////////  ///
 
 
 const listOfLetters = ["a","a","b","c","A"];
@@ -54,7 +56,7 @@ function occurencesOfLetters(arrayOfLetters, letter) {
 }
 // console.log(occurencesOfLetters(listOfLetters, 'C'));
 
-////////////////////////////////////////////////////////////////////////  ///
+///////////////////////////Exercises 3/////////////////////////////////////////////  ///
 
 const array = ['awesome','example','of','forEach']
 
@@ -69,7 +71,7 @@ function printFirstAndLast (arrayOfLetters) {
 // console.log(printFirstAndLast(listOfLetters, 'a'))
 
 
-///////////////////////////////////////////////////////////////////////////
+///////////////////////////////Exercises 4////////////////////////////////////////////
 
  const arrayOfNumbers = [1, 2, 3, 5]
 
@@ -81,7 +83,7 @@ const result = array.map((element, index)=> element * index);
 
 
 
-////////////////////////////////////////////////////////////////////////  ///
+////////////////////////////// Exercises 5//////////////////////////////////////////  ///
 
 function addKeyAndValue(array, key, value) {
  for (element of array) {
@@ -93,6 +95,8 @@ function addKeyAndValue(array, key, value) {
 
 // console.log(addKeyAndValue(stores, "isInstructor", true));
 
+////////////////////////////////////////////////////////////////
+// PART ONE OF MORE ARRAYS
 ////////////////////////////////////////////////////////////////
 let users = [
   {
@@ -165,7 +169,7 @@ function printEmails (){
 }
 // printEmails()
 
-////////////////////////////////////////////////////////////////////////
+////////////////////////////////Exercises 1////////////////////////////////////////
 function printHobbies (){
    for (object of users)
     object
@@ -175,7 +179,7 @@ function printHobbies (){
 
 
 // printHobbies()
-//////////////////////////////////////////////////
+/////////////////////////////Exercises 2////////////////////////////////////////////////
 
  function findHometownByState(state ){
 
@@ -184,7 +188,7 @@ function printHobbies (){
 }
 // findHometownByState('CA' )
 
-////////////////////////////////////////////////////////////////
+///////////////////////////////Exercises 3///////////////////////////////////////////////////////////
 
 function allLanguages() {
   const languagesArray = users.map(user => user.favoriteLanguages)
@@ -207,7 +211,7 @@ function allLanguages() {
 
 // allLanguages()
 
-////////////////////////////////////////////////////////////////
+////////////////////////////Exercises 4/////////////////////////////////////////////////
 
 function hasFavoriteEditor(editor){
   const result =users.some(user => user.favoriteEditor === editor);
@@ -215,7 +219,7 @@ function hasFavoriteEditor(editor){
 }
 // hasFavoriteEditor('VS Code')
 
-////////////////////////////////////////////////////////////////
+/////////////////////////////////Exercises 5//////////////////////////////////////////////////////////
 
 function findByUsername (username){
   const result = users.filter(element => element.username === username)
@@ -224,19 +228,32 @@ function findByUsername (username){
 // findByUsername('david');
 
 ////////////////////////////////////////////////////////////////
+// PART TWO OF MORE ARRAYS
+////////////////////////////////////////////////////////////////
 let word = 'incredible'
-let vowel = ['a', 'e', 'i', 'o', 'u']
-
-
+const vowelsArray = ['a', 'e', 'i', 'o', 'u']
 function vowelCount (wordToCheck){
-  const result = wordToCheck.forEach(letter => {
-    if ( vowel.include(letter)){
-      return letter
-    }
+  const arrayOfWords = [...wordToCheck]
+  const availableVowels = arrayOfWords.filter(vowel => {
+    if (vowelsArray.includes(vowel)) return vowel;
   })
+  console.log(availableVowels);
+  const arrayOfObject = [];
+  for (let i = 0; i < availableVowels.length; i++) {
+
+
+  }
 }
+// vowelCount(word)
 // let string ='book'
 ////////////////////////////////////////////////////////////////////////
-// function removeVowels (string){
-//   const result = string.
-// }
+
+function removeVowels (wordToCheck){
+  const arrayOfWords = [...wordToCheck]
+  const availableConsonants = arrayOfWords.filter(consonant => {
+    if (!vowelsArray.includes(consonant)) return consonant;
+  })
+  console.log(availableConsonants);
+}
+// removeVowels (word)
+// removeVowels('amazing')
