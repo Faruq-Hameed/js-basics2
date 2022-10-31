@@ -186,22 +186,24 @@ function printHobbies (){
 
 ////////////////////////////////////////////////////////////////
 
-function allLanguages(){
-  const result = users.map(user => user.favoriteLanguages)
-  const result2 = []
-  for (arrayElement of result){
-    
-    for (element of arrayElement){
-      result2.push(element)
+function allLanguages() {
+  const languagesArray = users.map(user => user.favoriteLanguages)
+  const arrayOfLanguages = []
+  for (arrayElement of languagesArray) {
+
+    for (element of arrayElement) {
+      arrayOfLanguages.push(element)
     }
   }
-  const result3 = []
-  for( element of result2){
-    if (result3.includes(element)) continue;
-    else result3.push(element)
+  const finalArrayOfLanguages = []
+  for (language of arrayOfLanguages) {
+    if (!finalArrayOfLanguages.includes(language)) {
+      finalArrayOfLanguages.push(language)
+    };
+
   }
-  console.log (result3)
-  }
+  console.log(finalArrayOfLanguages)
+}
 
 // allLanguages()
 
@@ -222,17 +224,15 @@ function findByUsername (username){
 // findByUsername('david');
 
 ////////////////////////////////////////////////////////////////
-// let word = 'incredible'
-// let vowel = ['a', 'e', 'i', 'o', 'u']
-//   for (letters of word){
-//     for (letter of vowel){
-//       if(letters === letter){
-//         let result = ''
-//         result
+let word = 'incredible'
+let vowel = ['a', 'e', 'i', 'o', 'u']
 
-// function vowelCount (wordToCheck){
-//   wordToCheck
-// }
+
+function vowelCount (wordToCheck){
+  wordToCheck.filter(element => {
+    
+  })
+}
 // let string ='book'
 ////////////////////////////////////////////////////////////////////////
 // function removeVowels (string){
