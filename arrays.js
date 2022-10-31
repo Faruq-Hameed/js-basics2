@@ -229,8 +229,10 @@ let vowel = ['a', 'e', 'i', 'o', 'u']
 
 
 function vowelCount (wordToCheck){
-  wordToCheck.filter(element => {
-    
+  const result = wordToCheck.forEach(letter => {
+    if ( vowel.include(letter)){
+      return letter
+    }
   })
 }
 // let string ='book'
