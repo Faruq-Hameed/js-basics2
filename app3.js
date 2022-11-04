@@ -19,6 +19,7 @@ function createAddress(address){
 }
 
 const addressNew = createAddress(address)// using factory function
+// console.log(addressNew);
 // console.log(addressNew.city)
 
 
@@ -45,7 +46,7 @@ function areEqual(a,b) {
 
 
 function areSame(a, b) {
-    if (a === address && b === address2) console.log(true); else console.log('false');
+    if (a === address && b === address1) console.log(true); else console.log('false');
 }
 // areSame(address1, address2);
 
